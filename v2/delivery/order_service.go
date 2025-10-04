@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/adshao/go-binance/v2/common"
+	"github.com/CuiChuping/go-binance/v2/common"
 )
 
 // CreateOrderService create order
