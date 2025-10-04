@@ -1,4 +1,4 @@
-module github.com/adshao/go-binance/v2
+module github.com/CuiChuping/go-binance/v2
 
 go 1.18
 
@@ -19,4 +19,8 @@ require (
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/stretchr/objx v0.5.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
+)
+
+replace (
+	github.com/adshao/go-binance/v2 v2.8.5 => github.com/CuiChuping/go-binance/v2 v2.8.5
 )
