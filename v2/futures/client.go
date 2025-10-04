@@ -760,3 +760,7 @@ func (c *Client) NewGetConvertStatusService() *ConvertStatusService {
 func (c *Client) NewApiTradingStatusService() *ApiTradingStatusService {
 	return &ApiTradingStatusService{c: c}
 }
+
+func (c *Client) NewInsuranceBalanceService() *InsuranceBalanceService {
+	return &InsuranceBalanceService{c: c}
+}
