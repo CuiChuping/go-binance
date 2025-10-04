@@ -21,7 +21,7 @@ func (s *InsuranceBalanceService) Symbol(symbol string) *InsuranceBalanceService
 func (s *InsuranceBalanceService) Do(ctx context.Context, opts ...RequestOption) (res []*InsuranceBalanceGroup, err error) {
 	r := &request{
 		method:   http.MethodGet,
-		endpoint: "/fapi/v1/apiTradingStatus",
+		endpoint: "/fapi/v1/insuranceBalance",
 		secType:  secTypeSigned,
 	}
 	if s.symbol != "" {
