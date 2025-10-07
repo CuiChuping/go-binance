@@ -8,14 +8,13 @@ import (
 
 // UMAllOrdersService service to get all UM orders
 type UMAllOrdersService struct {
-	c                 *Client
-	symbol            string
-	orderID           *int64
-	origClientOrderID string
-	startTime         *int64
-	endTime           *int64
-	limit             *int
-	recvWindow        *int64
+	c          *Client
+	symbol     string
+	orderID    *int64
+	startTime  *int64
+	endTime    *int64
+	limit      *int
+	recvWindow *int64
 }
 
 // Symbol set symbol
@@ -27,11 +26,6 @@ func (s *UMAllOrdersService) Symbol(symbol string) *UMAllOrdersService {
 // OrderID set orderID
 func (s *UMAllOrdersService) OrderID(orderID int64) *UMAllOrdersService {
 	s.orderID = &orderID
-	return s
-}
-
-func (s *UMAllOrdersService) OrigClientOrderID(origClientOrderID string) *UMAllOrdersService {
-	s.origClientOrderID = origClientOrderID
 	return s
 }
 
@@ -69,9 +63,6 @@ func (s *UMAllOrdersService) Do(ctx context.Context) ([]*UMAllOrdersResponse, er
 	r.setParam("symbol", s.symbol)
 	if s.orderID != nil {
 		r.setParam("orderId", *s.orderID)
-	}
-	if s.origClientOrderID != "" {
-		r.setParam("origClientOrderId", s.origClientOrderID)
 	}
 	if s.startTime != nil {
 		r.setParam("startTime", *s.startTime)
