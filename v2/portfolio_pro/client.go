@@ -228,3 +228,11 @@ func (c *Client) NewMintBFUSDService() *MintBFUSDService {
 func (c *Client) NewRedeemBFUSDService() *RedeemBFUSDService {
 	return &RedeemBFUSDService{c: c}
 }
+
+func (c *Client) NewMarginAssetLeverageService() *MarginAssetLeverageService {
+	return &MarginAssetLeverageService{c: c}
+}
+
+func (c *Client) NewCollateralRateService() *CollateralRateService {
+	return &CollateralRateService{c: c}
+}
