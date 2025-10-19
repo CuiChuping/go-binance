@@ -29,6 +29,6 @@ func (s *CollateralRateService) Do(ctx context.Context, opts ...RequestOption) (
 }
 
 type CollateralRateResponse struct {
-	Asset          string  `json:"asset"`
-	CollateralRate float64 `json:"collateralRate"`
+	Asset          string `json:"asset"`
+	CollateralRate string `json:"collateralRate"`
 }
